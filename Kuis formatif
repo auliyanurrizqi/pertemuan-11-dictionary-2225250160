@@ -1,0 +1,104 @@
+KUIS FORMATIF
+
+1. Soal: Jelaskan perbedaan antara list dan dictionary dalam Python.
+
+Jawaban: List menyimpan sekumpulan elemen yang diakses menggunakan indeks atau posisi. Dictionary menyimpan data dalam pasangan key-value (kunci dan nilai), sehingga nilai diakses menggunakan key.
+
+Contoh:
+
+nilai = [80, 85, 90]
+mahasiswa = {"A001": "Ayu"}
+
+2. Soal: Apa yang dimaksud dengan key pada dictionary? Berikan contohnya.
+
+Jawaban: Key adalah kunci atau identitas yang digunakan untuk mengakses nilai (value) pada dictionary. Contohnya, NIM dapat digunakan sebagai key untuk mengidentifikasi data mahasiswa.
+
+Contoh:
+
+mahasiswa = {"A001": "Ayu"}
+# "A001" merupakan key, sedangkan "Ayu" merupakan value.
+
+3. Soal: Apa yang terjadi jika kita mengakses key yang tidak tersedia menggunakan tanda kurung siku?
+
+Jawaban: Python akan menghasilkan error KeyError apabila key yang diminta tidak terdapat di dalam dictionary.
+
+Contoh:
+
+data = {"nama": "Ayu"}
+print(data["kelas"])  # Menghasilkan KeyError karena key "kelas" tidak ada.
+
+4. Soal: Jelaskan perbedaan penggunaan data["kelas"] dan data.get("kelas").
+
+Jawaban: data["kelas"] menghasilkan KeyError jika key "kelas" tidak tersedia. Sementara itu, data.get("kelas") mengembalikan None jika key tidak tersedia. Kita juga dapat memberikan nilai default dengan data.get("kelas", "Belum diisi").
+
+Contoh:
+
+data = {"nama": "Ayu"}
+print(data.get("kelas"))
+print(data.get("kelas", "Belum diisi"))
+
+5. Soal: Bagaimana cara memeriksa apakah suatu key tersedia dalam dictionary?
+
+Jawaban: Gunakan operator in untuk memeriksa apakah key terdapat di dalam dictionary.
+
+Contoh program:
+
+data = {"nama": "Ayu", "nilai": 85}
+
+if "nilai" in data:
+    print("Nilai tersedia.")
+else:
+    print("Nilai tidak tersedia.")
+
+6. Soal: Apa fungsi method items() pada dictionary?
+
+Jawaban: Method items() digunakan untuk memperoleh pasangan key-value sehingga kita dapat menelusuri key dan value secara bersamaan menggunakan perulangan.
+
+Contoh program:
+
+data = {"nama": "Ayu", "nilai": 85}
+
+for key, value in data.items():
+    print(f"{key}: {value}")
+
+7. Soal: Bagaimana cara menambahkan pasangan key-value baru ke dalam dictionary?
+
+Jawaban: Pasangan key-value baru dapat ditambahkan dengan memberikan nilai pada key yang belum ada menggunakan tanda kurung siku.
+
+Contoh program:
+
+data = {"nama": "Ayu", "nilai": 85}
+data["kelas"] = "A"
+print(data)
+
+Hasil:
+
+{'nama': 'Ayu', 'nilai': 85, 'kelas': 'A'}
+
+8. Soal: Bagaimana cara mengubah value dari key yang sudah ada?
+
+Jawaban: Value dapat diubah dengan memberikan nilai baru pada key yang sudah ada.
+
+Contoh program:
+
+data = {"nama": "Ayu", "nilai": 85}
+data["nilai"] = 90
+print(data)
+
+Hasil:
+
+{'nama': 'Ayu', 'nilai': 90}
+
+9. Soal: Mengapa NIM cocok digunakan sebagai key pada dictionary data mahasiswa?
+
+Jawaban: NIM cocok digunakan sebagai key karena setiap mahasiswa memiliki NIM yang unik. Dengan demikian, data mahasiswa dapat dicari secara langsung berdasarkan NIM tanpa harus mencari menggunakan indeks list.
+
+10. Soal: Apa fungsi perintah git push dalam alur kerja Git dan GitHub? Tuliskan contoh perintahnya.
+
+Jawaban: Perintah git push digunakan untuk mengirim commit dari repositori lokal ke repositori remote, misalnya repositori di GitHub.
+
+Contoh perintah:
+
+git add .
+git commit -m "feat: menyelesaikan latihan dictionary"
+git push
