@@ -1,0 +1,133 @@
+# KUIS FORMATIF PERTEMUAN 11
+## Dictionary/Map dan Pasangan Key-Value dalam Python
+
+### 1. Soal
+Apa perbedaan utama list dan dictionary?
+
+**Jawaban:**
+
+List adalah struktur data yang menyimpan sekumpulan elemen dan umumnya diakses menggunakan indeks posisi. Dictionary adalah struktur data yang menyimpan pasangan *key-value* dan diakses menggunakan key.
+
+Contoh:
+```python
+nilai = [80, 85, 90]
+mahasiswa = {"A001": "Ayu"}
+```
+
+### 2. Soal
+Apa fungsi key dalam dictionary?
+
+**Jawaban:**
+
+Key berfungsi sebagai pengenal untuk mengakses atau menemukan value tertentu dalam dictionary. Dalam data mahasiswa, NIM dapat digunakan sebagai key untuk menemukan informasi mahasiswa.
+
+### 3. Soal
+Apa yang terjadi jika `data['kelas']` dipanggil saat key `'kelas'` tidak ada?
+
+**Jawaban:**
+
+Python akan menghasilkan `KeyError` karena key `'kelas'` tidak tersedia di dalam dictionary.
+
+### 4. Soal
+Apa perbedaan `data['kelas']` dengan `data.get('kelas')`?
+
+**Jawaban:**
+
+- `data['kelas']` menghasilkan value jika key tersedia, tetapi menghasilkan `KeyError` jika key tidak tersedia.
+- `data.get('kelas')` menghasilkan value jika key tersedia dan `None` jika key tidak tersedia.
+- `data.get('kelas', 'Belum diisi')` menghasilkan nilai default `'Belum diisi'` jika key tidak tersedia.
+
+### 5. Soal
+Bagaimana memeriksa apakah suatu key tersedia?
+
+**Jawaban:**
+
+Menggunakan operator `in` untuk memeriksa keberadaan key dalam dictionary.
+
+Contoh:
+```python
+data = {"nama": "Ayu", "nilai": 85}
+
+if "nilai" in data:
+    print("Nilai tersedia.")
+else:
+    print("Nilai tidak tersedia.")
+```
+
+### 6. Soal
+Apa fungsi `items()`?
+
+**Jawaban:**
+
+Method `items()` digunakan untuk menelusuri pasangan key dan value secara bersamaan. Method ini sering digunakan dalam perulangan `for` untuk menampilkan seluruh data dictionary.
+
+Contoh:
+```python
+data = {"nama": "Ayu", "nilai": 85}
+
+for key, value in data.items():
+    print(f"{key}: {value}")
+```
+
+### 7. Soal
+Bagaimana menambahkan pasangan key-value baru?
+
+**Jawaban:**
+
+Pasangan key-value baru dapat ditambahkan menggunakan assignment dengan key yang belum tersedia.
+
+Contoh:
+```python
+data = {"nama": "Ayu", "nilai": 85}
+
+data["kelas"] = "A"
+
+print(data)
+```
+
+Hasil:
+```text
+{'nama': 'Ayu', 'nilai': 85, 'kelas': 'A'}
+```
+
+### 8. Soal
+Bagaimana mengubah value dari key yang sudah ada?
+
+**Jawaban:**
+
+Value dapat diubah dengan memberikan nilai baru pada key yang sama.
+
+Contoh:
+```python
+data = {"nama": "Ayu", "nilai": 85}
+
+data["nilai"] = 90
+
+print(data)
+```
+
+Hasil:
+```text
+{'nama': 'Ayu', 'nilai': 90}
+```
+
+### 9. Soal
+Dalam data pendidikan, mengapa NIM cocok digunakan sebagai key?
+
+**Jawaban:**
+
+NIM cocok digunakan sebagai key karena merupakan identitas mahasiswa yang unik. Dengan menggunakan NIM sebagai key, data mahasiswa dapat dicari dan diakses secara langsung tanpa harus mencari berdasarkan indeks posisi seperti pada list.
+
+### 10. Soal
+Perintah apa yang digunakan untuk mengirim commit ke GitHub?
+
+**Jawaban:**
+
+Perintah yang digunakan adalah `git push`, yaitu untuk mengirim commit dari repositori lokal ke repositori jarak jauh di GitHub.
+
+Contoh:
+```bash
+git add .
+git commit -m "feat: menyelesaikan latihan dictionary"
+git push
+```
